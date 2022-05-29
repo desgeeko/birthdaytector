@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthdaytector</title>
+    <script src="birthdaytector.js"></script>
+    <style>
+        body {
+                font-family: Helvetica, Arial, sans-serif;
+                margin: auto;
+                padding-top: 50px;
+                width: 320px;
+            }
+        p { text-align: center;}
+        #controls { text-align: center; };
+        tbody { display: table; }
+        td:first-child { width: 55%; }
+        td:nth-child(2) { width: 10%; }
+        td:nth-child(3) { text-align: right; width: 35%;}
+    </style>
+</head>
+<body>
+    <h1>&#x1F382 Birthdaytector &#x1F4E1</h1>
+    <br>
+    <p>Let's count time in unusual ways
+    <br>and find additional reasons to celebrate!</p>
+    <br>
+    <div>
+        <p>Enter a birthdate:</p>
+        <div id="controls">
+        <input type="date" name="bd" id="bd" onchange="reset(results);">
+        <button onclick="detect(results, bd.value);">Detect</button>
+        </div>
+    </div>
+    <br>
+    <div id="results"></div>
+</body>
+</html>

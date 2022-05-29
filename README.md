@@ -1,2 +1,2 @@
 # birthdaytector
-Playing with dates
+Playing with dates, for educational purposes
