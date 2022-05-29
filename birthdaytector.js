@@ -47,12 +47,20 @@ function reset(placeholder) {
 }
 
 function detect(placeholder, bdate) {
+    if (bdate == "") {
+        alert("Please enter a date!");
+        return;
+    }
     let res = [];
     let before = new Date(bdate);
     before.setHours(0, 0, 0, 0)
     let now = new Date();   
     now.setHours(0, 0, 0, 0)
     let d = now - before;
+    if (d <= 0) {
+        alert("Please enter a date in the past!");
+        return;
+    }
     let nbS = calcNext(ms2Seconds(d));
     let nextS = new Date(before.getTime() + seconds2ms(nbS));
     res.push({"unit": "sec.", "delay": ms2Seconds(d), "nb": nbS, "next": nextS});
